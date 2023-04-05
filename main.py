@@ -13,4 +13,7 @@ posRight = int(window.winfo_screenwidth() / 2 - winWidth / 2)
 posDown = int(window.winfo_screenheight() / 2 - winwHeight / 2)
 window.geometry("+{}+{}".format(posRight, posDown))
 
+welcome = Label(window, text="NFL Matchup Tool", background="white", foreground="white")
+welcome.grid(row=0, column=winWidth/2, columnspan=10)
+
 window.mainloop()
