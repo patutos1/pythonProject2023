@@ -20,15 +20,19 @@ window.geometry(f'{windowWidth}x{windowHeight}+{centerX}+{centerY}')
 label=Label(window, text="NFL Match-up Tool", font=('Helvetica bold', 48))
 label.place(x=20, y=20)
 
-#Here is going to be the text boxes for the player, the user will be able to
-#input the name of the player they want.
-canvas1 = tkinter.Canvas(window, width=400, height=300)
-canvas2 = tkinter.Canvas(window, width=400, height=300)
-canvas1.pack()
-canvas2.pack()
-
 label1 = tkinter.Label(window, text='Enter the name of a Wide Receiver: ', font=('Helevetica',24))
 label1.place(x=20, y=100)
+label2 = tkinter.Label(window, text='Enter the name of a Corner Back: ', font=('Helevetica',24))
+label2.place(x=20, y=200)
+
+#Here is going to be the text boxes for the player, the user will be able to
+#input the name of the player they want.
+canvas1 = tkinter.Canvas(window, width=300, height=200)
+canvas2 = tkinter.Canvas(window, width=300, height=200)
+canvas1.place(x=20, y=150)
+canvas2.place(x=20, y=250)
+canvas1.pack()
+canvas2.pack()
 
 entry1 = tkinter.Entry(window)
 entry2 = tkinter.Entry(window)
@@ -36,6 +40,5 @@ canvas1.create_window(200, 140, window=entry1)
 canvas2.create_window(200, 140, window=entry2)
 
 #def getPlayer():
-
 
 window.mainloop()
