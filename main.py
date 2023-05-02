@@ -17,12 +17,12 @@ centerX= int(screenWidth/2 - windowWidth /2)
 centerY= int(screenHeight/2 - windowHeight/2)
 window.geometry(f'{windowWidth}x{windowHeight}+{centerX}+{centerY}')
 
-label=Label(window, text="NFL Match-up Tool", font=('Helvetica bold', 48))
+label=Label(window, text="NFL Match-up Tool", font=('Arial Black bold', 48))
 label.place(x=20, y=20)
 
-label1 = tkinter.Label(window, text='Enter the name of a Wide Receiver: ', font=('Helevetica',24))
+label1 = tkinter.Label(window, text='Enter the name of Team 1: ', font=('Arial Black',24))
 label1.place(x=20, y=100)
-label2 = tkinter.Label(window, text='Enter the name of a Corner Back: ', font=('Helevetica',24))
+label2 = tkinter.Label(window, text='Enter the name of Team 2: ', font=('Arial Black',24))
 label2.place(x=20, y=200)
 
 #Here is going to be the text boxes for the player, the user will be able to
@@ -39,6 +39,9 @@ entry2 = tkinter.Entry(window)
 canvas1.create_window(200, 140, window=entry1)
 canvas2.create_window(200, 140, window=entry2)
 
+#Now is the finished design of the interface with added logos of each team 
+
 #def getPlayer():
 
-window.mainloop()
+window.mainloop() 
+
