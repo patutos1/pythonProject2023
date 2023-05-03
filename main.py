@@ -43,5 +43,36 @@ canvas2.create_window(200, 140, window=entry2)
 
 #def getPlayer():
 
-window.mainloop() 
+player_dict={
+    "Elizabeth":{"Wins":41,"Losses":3,"Ties":22},
+    "Joel":{"Wins":32,"Losses":14,"Ties":17},
+    "Mike":{"Wins":8,"Losses":19,"Ties":11},
+}
+print("Game State Program\n")
+print("ALL PLAYERS:")
+for dict in sorted(player_dict.keys()):
+    print(dict)
+
+while(1):
+    flag=1
+    print("\nEnter a player name: ",end='')
+    name=input()
+    for dict in player_dict.keys():
+        if(name.lower()==dict.lower()):
+            print("Wins: ",end='')
+            print(player_dict[dict]["Wins"])
+            print("Losses: ",end='')
+            print(player_dict[dict]["Losses"])
+            print("Ties: ",end='')
+            print(player_dict[dict]["Ties"])
+            flag=0
+    if flag:
+        print("There is no player named ",end='')
+        print(name)
+
+    print("\nContinue? (y/n) : ",end='')
+    choice=input()
+    if(choice=='n'):
+        print("Bye!")
+        break
 
