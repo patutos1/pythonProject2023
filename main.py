@@ -44,18 +44,47 @@ canvas2.create_window(200, 140, window=entry2)
 #def getPlayer():
 
 player_dict={
-    "Elizabeth":{"Wins":41,"Losses":3,"Ties":22},
-    "Joel":{"Wins":32,"Losses":14,"Ties":17},
-    "Mike":{"Wins":8,"Losses":19,"Ties":11},
+    "Giants":{"Wins":9,"Losses":7,"Ties":1,"Points Scored Total":365,"Points Allowed":371},
+    "Buccaneers":{"Wins":8,"Losses":9,"Ties":0,"Points Scored Total":313,"Points Allowed":358},
+    "49ers":{"Wins":13,"Losses":4,"Ties":0,"Points Scored Total":450,"Points Allowed":277},
+    "Panthers":{"Wins":7,"Losses":10,"Ties":0,"Points Scored Total":347,"Points Allowed":374},
+    "Packers":{"Wins":8,"Losses":9,"Ties":0,"Points Scored Total":370,"Points Allowed":371},
+    "Rams":{"Wins":5,"Losses":12,"Ties":0,"Points Scored Total":307,"Points Allowed":384},
+    "Vikings":{"Wins":13,"Losses":4,"Ties":0,"Points Scored Total":424,"Points Allowed":427},
+    "Cowboys":{"Wins":12,"Losses":5,"Ties":0,"Points Scored Total":467,"Points Allowed":342},
+    "Saints":{"Wins":7,"Losses":10,"Ties":0,"Points Scored Total":330,"Points Allowed":345},
+    "Seahawks":{"Wins":9,"Losses":8,"Ties":0,"Points Scored Total":407,"Points Allowed":401},
+    "Eagles":{"Wins":14,"Losses":3,"Ties":0,"Points Scored Total":477,"Points Allowed":344},
+    "Commanders":{"Wins":8,"Losses":8,"Ties":1,"Points Scored Total":321,"Points Allowed":343},
+    "Bears":{"Wins":3,"Losses":14,"Ties":0,"Points Scored Total":326,"Points Allowed":463},
+    "Lions":{"Wins":9,"Losses":8,"Ties":0,"Points Scored Total":453,"Points Allowed":427},
+    "Falcons":{"Wins":7,"Losses":10,"Ties":0,"Points Scored Total":365,"Points Allowed":386},
+    "Cardinals":{"Wins":4,"Losses":13,"Ties":0,"Points Scored Total":340,"Points Allowed":449},
+    "Steelers":{"Wins":9,"Losses":8,"Ties":0,"Points Scored Total":308,"Points Allowed":346},
+    "Patriots":{"Wins":8,"Losses":9,"Ties":0,"Points Scored Total":364,"Points Allowed":347},
+    "Dolphins":{"Wins":9,"Losses":8,"Ties":0,"Points Scored Total":397,"Points Allowed":399},
+    "Jets":{"Wins":7,"Losses":10,"Ties":0,"Points Scored Total":296,"Points Allowed":316},
+    "Colts":{"Wins":4,"Losses":12,"Ties":1,"Points Scored Total":289,"Points Allowed":427},
+    "Broncos":{"Wins":5,"Losses":12,"Ties":0,"Points Scored Total":287,"Points Allowed":359},
+    "Ravens":{"Wins":10,"Losses":7,"Ties":0,"Points Scored Total":350,"Points Allowed":315},
+    "Raiders":{"Wins":6,"Losses":11,"Ties":0,"Points Scored Total":395,"Points Allowed":418},
+    "Jaguars":{"Wins":9,"Losses":8,"Ties":0,"Points Scored Total":404,"Points Allowed":350},
+    "Chargers":{"Wins":10,"Losses":7,"Ties":0,"Points Scored Total":391,"Points Allowed":384},
+    "Browns":{"Wins":7,"Losses":10,"Ties":0,"Points Scored Total":361,"Points Allowed":381},
+    "Chiefs":{"Wins":14,"Losses":3,"Ties":0,"Points Scored Total":496,"Points Allowed":369},
+    "Bills":{"Wins":13,"Losses":3,"Ties":0,"Points Scored Total":455,"Points Allowed":286},
+    "Bengals":{"Wins":12,"Losses":4,"Ties":0,"Points Scored Total":418,"Points Allowed":322},
+    "Texans":{"Wins":3,"Losses":13,"Ties":1,"Points Scored Total":289,"Points Allowed":420},
+    "Titans":{"Wins":7,"Losses":10,"Ties":0,"Points Scored Total":298,"Points Allowed":459},
 }
-print("Game State Program\n")
-print("ALL PLAYERS:")
+print("NFL Stat Tracker\n")
+print("ALL TEAMS:")
 for dict in sorted(player_dict.keys()):
     print(dict)
 
 while(1):
     flag=1
-    print("\nEnter a player name: ",end='')
+    print("\nEnter a team : ",end='')
     name=input()
     for dict in player_dict.keys():
         if(name.lower()==dict.lower()):
@@ -65,14 +94,44 @@ while(1):
             print(player_dict[dict]["Losses"])
             print("Ties: ",end='')
             print(player_dict[dict]["Ties"])
+            print("Points Scored Total: ",end='')
+            print(player_dict[dict]["Points Scored Total"])
+            print("Points Allowed: ",end='')
+            print(player_dict[dict]["Points Allowed"])
             flag=0
     if flag:
-        print("There is no player named ",end='')
+        print("There is no team named ",end='')
+        print(name)
+        
+    print("\Continue? (y) : ",end='')
+    choice=input()
+    if(choice=='y'):
+        print("Next")
+        break
+
+while(2):
+    flag=2
+    print("\nEnter another team : ",end='')
+    name=input()
+    for dict in player_dict.keys():
+        if(name.lower()==dict.lower()):
+            print("Wins: ",end='')
+            print(player_dict[dict]["Wins"])
+            print("Losses: ",end='')
+            print(player_dict[dict]["Losses"])
+            print("Ties: ",end='')
+            print(player_dict[dict]["Ties"])
+            print("Points Scored Total: ",end='')
+            print(player_dict[dict]["Points Scored Total"])
+            print("Points Allowed: ",end='')
+            print(player_dict[dict]["Points Allowed"])
+            flag=0             
+    if flag:
+        print("There is no team named ",end='')
         print(name)
 
     print("\nContinue? (y/n) : ",end='')
     choice=input()
     if(choice=='n'):
-        print("Bye!")
+        print("Thanks for using the NFL Team Stat Tracker!")
         break
-
