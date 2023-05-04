@@ -1,7 +1,7 @@
 import tkinter
 from tkinter import *
 from tkinter import ttk
-from PIL import ImageTk, Image
+#from PIL import ImageTk, Image
 
 window = Tk()
 window.title("NFL Matchup Tool Demo")
@@ -29,7 +29,7 @@ T1.place(x=380, y=100)
 T2 = Text(window, height=3, width=42)
 T2.place(x=1280, y=100)
 
-Enter1 = Button(window, text="Enter", height=3, width=8, command=check1())
+Enter1 = Button(window, text="Enter", height=3, width=8)
 Enter1.place(x=725, y=100)
 Enter2 = Button(window, text="Enter", height=3, width=8)
 Enter2.place(x=1630, y=100)
