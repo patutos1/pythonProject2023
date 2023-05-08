@@ -1,15 +1,6 @@
 #Final Project Python
 #By Ryan Lopez & Samuel Patuto
 
-import urllib.request
-
-webURL = urllib.request.urlopen('https://www.cbssports.com/nfl/standings/')
-
-print("result code: " + str(webUrl.getcode()))
-
-data = webUrl.read()
-print_(data)
-
 player_dict={
     "Giants":{"Wins":9,"Losses":7,"Ties":1,"Points Scored Total":365,"Points Allowed":371},
     "Buccaneers":{"Wins":8,"Losses":9,"Ties":0,"Points Scored Total":313,"Points Allowed":358},
