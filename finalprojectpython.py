@@ -1,6 +1,8 @@
 #Final Project Python
 #By Ryan Lopez & Samuel Patuto
 
+#NFL Match-Up Tool and mock match-up! 
+
 player_dict={
     "Giants":{"Wins":9,"Losses":7,"Ties":1,"Points Scored Total":365,"Points Allowed":371},
     "Buccaneers":{"Wins":8,"Losses":9,"Ties":0,"Points Scored Total":313,"Points Allowed":358},
